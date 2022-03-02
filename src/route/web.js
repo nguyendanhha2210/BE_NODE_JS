@@ -9,7 +9,7 @@ const initWebRoute = (app) => {
     router.get('/', homeController.getHomepage);
     router.get('/crud', homeController.getCrud);
     router.post('/post-crud', homeController.postCrud);
-    
+
     router.get('/get-crud', homeController.displayCrud);
     router.get('/edit-crud', homeController.editCrud);
     router.post('/put-crud', homeController.putCrud);
@@ -23,6 +23,8 @@ const initWebRoute = (app) => {
     router.get('/api/all-codes', userController.getAllCodes);
 
     router.get('/api/top-doctor-home', doctorController.getTopDoctorHome);
+    router.get('/api/top-all-doctor', doctorController.getAllDoctor);
+    router.post('/api/save-infor-doctor', doctorController.postInforDoctor);
 
     return app.use('/', router)
 }
